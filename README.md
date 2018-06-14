@@ -1,4 +1,5 @@
 # imluavip
+# 因为用lua的开发之路还是蛮辛苦的,所以如果觉得对你有用,或者帮到你了,请给个star.^_^.
 # 一些说明
 - 因为自己爱好搞域名,所以当准备或者正在学习某个东西的时候,就喜欢搞一个相关的域名.开始是这么开始的,但是结局和这个域名有多大关联和影响,就不得而知了......
 
@@ -16,8 +17,14 @@
 - 有发送email的.
 - 有google,paypal充值的.
 - 有微信,支付宝充值的(代码都写得差不多了,但是没有调试,需要公司账户).
-- 两种模式下(ngx和lua)一些常用的库.mysql,redis,json,djson,xml,aes,uuid,log, lua_shared_dict等等.
+- 两种模式下(ngx和lua)一些常用的库.mysql(有事务),redis,json,djson,xml,aes,uuid,log, lua_shared_dict等等.
 
+# config文件说明
+
+- 一些之前用的,涉及域名,密钥之类的,我都改了下,要是还有残余的话,看到的话,麻烦给告知下,我删下.
+- mysql数据表的话,暂时就不列出来了,没多大参考价值.觉得这套唯一的价值,就是有些代码片段可以作为参考.
+- 为啥叫app2,不是app呢,因为当时一台服务器部署2套lua的服务,然后因为require就会出现a服require b服的文件.
+- 当然还有一份http的api的文档,也隐掉了.
 
 # 环境部署说明
 这个说明是一个同事给整理出来的.他是写过2个接口(因为感觉和我不是一个路子,最后给改了改)在这个系统里面,然后没多久,调去做一个别的新项目了.
@@ -109,7 +116,7 @@ location / {
 1 2 * * *       sh  /data/v3-p2papi/del_img_video.sh >>/data/v3-p2papi/log/del.log
 ```
 
-#我的mac的luarock list,仅作参考
+# 我的mac的luarock list,仅作参考
 ```
 Installed rocks:
 ----------------

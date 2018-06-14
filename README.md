@@ -15,9 +15,9 @@
 
 # 功能说明
 - 有发送email的.
-- 有google,paypal充值的.
+- 有google,paypal充值的,以及对应的token的刷新(ngx实时刷新和crontab异步刷新).
 - 有微信,支付宝充值的(代码都写得差不多了,但是没有调试,需要公司账户).
-- 两种模式下(ngx和lua)一些常用的库.mysql(有事务),redis,json,djson,xml,aes,uuid,log, lua_shared_dict等等.
+- 两种模式下(ngx和lua)一些常用的库.mysql(有事务),redis,json,djson,xml,aes加密解密,uuid,log,lua_shared_dict等等.
 
 # config文件说明
 

@@ -13,11 +13,18 @@
 
 - 上面的域名,价钱可谈,这才是上面布拉布拉一堆的中心思想!!!
 
+# 项目缺陷
+- 没有明确的分层结构,写了好多重复的代码,包括操作redis,mysql,一些代码逻辑.
+- 数据接受和返回都没有做统一入口出口的封装.
+- 这些不足,再后来的golang框架中都考虑到了并解决了.
+
 # 功能说明
 - 有发送email的.
 - 有google,paypal充值的,以及对应的token的刷新(ngx实时刷新和crontab异步刷新).
 - 有微信,支付宝充值的(代码都写得差不多了,但是没有调试,需要公司账户).
 - 两种模式下(ngx和lua)一些常用的库.mysql(有事务),redis,json,djson,xml,aes加密解密,uuid,log,lua_shared_dict等等.
+- 图片视频的异步压缩,主要是ffmpeg,ffprobe,imagemagick.
+- aws s3的上传下载,aws的preupload的使用(lua的调试中遇见一个问题,用golang实现了生成preupload url地址的功能).
 
 # config文件说明
 
